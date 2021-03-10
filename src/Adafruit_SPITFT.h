@@ -18,9 +18,7 @@
 
 #define USE_FAST_PINIO
 
-#if defined(PARTICLE)
-  #undef USE_FAST_PINIO
-#elif defined(__AVR__)
+#if defined(__AVR__)
   typedef volatile uint8_t RwReg;
 #elif defined(ARDUINO_STM32_FEATHER)
   typedef volatile uint32 RwReg;
